@@ -1,0 +1,44 @@
+CTFを解く様子を記録する試み
+Packer
+-picoCTF 2024
+-reverse engineering
+-midium
+
+## memo
+とりあえずfileコマンド
+out: ELF 64-bit LSB executable, x86-64, version 1 (GNU/Linux), statically linked, no section header
+
+とりあえず実行してみる
+passwordを入力する系ELFファイル
+
+とりあえずghidraに通してみる
+main関数がない
+functionsの一覧を見る感じ、ELFファイルの関数情報を全く取り出せていない
+dnSpyっていうデコンパイラを試してみる->.elf解析できないっぽい?
+https://stackoverflow.com/questions/68719105/ghidra-doesnt-find-the-functions
+どうやらバイナリが圧縮(?)されている際に、ghidraだと関数を表示しないがIDAだとよくわからない関数群を表示するらしい
+->なので圧縮方式が何かをfile binwalk strings | head(10行表示)でサーチ
+000000E0  10 00 00 00  00 00 00 00   8B 25 67 AE  55 50 58 21                                                .........%g.UPX!
+upx -d ファイル名で解凍
+(↓実行結果)
+                       Ultimate Packer for eXecutables
+                          Copyright (C) 1996 - 2024
+UPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024
+
+        File size         Ratio      Format      Name
+   --------------------   ------   -----------   -----------
+[WARNING] bad b_info at 0x4b718
+
+[WARNING] ... recovery at 0x4b714
+
+    877724 <-    336520   38.34%   linux/amd64   out
+
+もう一度ghidraに通す
+->なんか意味わからんくらいfunctionsの中にファイルがある
+main関数発見
+flag表示のputs発見
+(なんか知らんが16進数文字列で書かれてた)
+dencodeに通してgg
+
+flag:picoCTF{U9X_UnP4ck1N6_B1n4Ri3S_1a5a3f39}
+
