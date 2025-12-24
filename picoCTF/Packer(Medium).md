@@ -11,10 +11,7 @@
 2. デコンパイルして中身を見る
 3. flagを表示するputsを直接発見
 ## 実行ログ
-```
-file binwalk strings | head 
-```
-実行結果(一部)
+hexeditorでファイルを直接確認
 ```
 000000E0  10 00 00 00  00 00 00 00   8B 25 67 AE  55 50 58 21                   .........%g.UPX!
 ```
@@ -42,7 +39,7 @@ UPX 4.2.2       Markus Oberhumer, Laszlo Molnar & John Reiser    Jan 3rd 2024
 
 
 ## 使用したツール・コマンド
-- fileコマンド
+- file,binwalk,stringsコマンド
 - UPX(Ultimate Packer for eXecutables)
 - Ghidra
 
