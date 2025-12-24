@@ -1,4 +1,6 @@
 # Packer (Reverse Engineering / Medium)
+<img width="712" height="549" alt="image" src="https://github.com/user-attachments/assets/777a9445-6754-440d-b38d-524f99da4e16" />
+
 ## 問題の概要
 - **目的**:バイナリファイルの解凍
 - **配布物**:passwordつきELFファイル
