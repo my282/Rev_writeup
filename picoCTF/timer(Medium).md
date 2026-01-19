@@ -7,7 +7,7 @@
 1. Android studioでapkファイルを開く
 2. apkファイルのversion nameがflagになっている
 ## 実行ログ
-
+![alt text](<images/スクリーンショット 2026-01-19 231307.png>)
 ## 使用したツール・コマンド
 - Android Studio
 ## 学び・沼った所
