@@ -1,4 +1,5 @@
 # [Bit-O-Asm-3] (Reverse Engineering / Medium)
+![alt text](images/image-3.png)
 ## 問題の概要
 - **目的**:アセンブリ命令実行後のeaxレジスタ内の数値を特定
 - **配布物**:txtファイル

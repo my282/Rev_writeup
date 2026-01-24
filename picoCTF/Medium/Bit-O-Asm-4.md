@@ -1,4 +1,5 @@
 # [Bit-O-Asm-4] (Reverse Engineering / Medium)
+![alt text](images/image-4.png)
 ## 問題の概要
 - **目的**: 最終的にeaxレジスタに格納されている数値の特定
 - **配布物**: x86-64ソースコード
