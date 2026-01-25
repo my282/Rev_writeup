@@ -99,6 +99,10 @@ picoCTF{w4ke_m3_up_w1th_fr1da_f27acc38}
 - dencode
 ## 学び・沼った所
 Fridaを使う際に大事な事
+```
+python -m frida_tools.tracer -i "関数名" .\対象ファイル
+```
+↑これで特定の関数をトレースできる
 1. 関数の仕様・定義を確認する(引数など)
 2. Fridaの文法に従って関数をいじる
 3. onEnter(引数の操作)とonLeave(戻り値の操作)を区別する
