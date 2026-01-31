@@ -48,6 +48,7 @@ onEnter(log, args, state) {
   onLeave(log, retval, state) {
     var result = retval.toString();
     log(result);
+    
   }
 });
 ```
